@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePrototypeTable extends Migration
+class AddSensorsRelations extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreatePrototypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('prototype', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('especie_id')->unsigned();
-            $table->integer('sensor_id')->unsigned();
-            $table->string('name');
-            $table->timestamps();
+        Schema::table('sensors', function (Blueprint $table) {
+            $table->foreign('ambiente_id')->references('id')->on('ambientes');
         });
     }
 
@@ -29,6 +25,8 @@ class CreatePrototypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prototype');
+        Schema::table('sensors', function (Blueprint $table) {
+            $table->dropForeign('sensors_ambiente_id_foreign');
+        });
     }
 }

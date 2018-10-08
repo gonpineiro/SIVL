@@ -21,9 +21,9 @@ class DatabaseSeeder extends Seeder
         DB::table('variedades')->insert(['name' => 'indica']);
         DB::table('variedades')->insert(['name' => 'Rudelaris']);
         // CARGANDO TABLA MARCAS
-        DB::table('marcas')->insert(['name' => 'Monkey Seeds']);
-        DB::table('marcas')->insert(['name' => 'Sense Seed']);
-        DB::table('marcas')->insert(['name' => 'Good Seed']);
+        DB::table('marcas')->insert(['name' => 'Monkey Seeds','price_3' => 350,'price_5' => 550]);
+        DB::table('marcas')->insert(['name' => 'Sense Seed','price_3' => 330,'price_5' => 500]);
+        DB::table('marcas')->insert(['name' => 'Good Seed','price_3' => 420,'price_5' => 620]);
         // CARGANDO TABLA SENSORES
         DB::table('sensors')->insert(['name' => 'SEN-1','valor' => 70,'ambiente_id' => 1]);
         DB::table('sensors')->insert(['name' => 'SEN-2','valor' => 20,'ambiente_id' => 1]);

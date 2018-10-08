@@ -19,4 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/prototypes', 'PrototypesController@show');
-Route::get('/especies', 'MarcasEspeciesController@show');
+Route::get('/especies', 'EspeciesController@show');
+Route::get('/marcas', 'MarcasController@show');

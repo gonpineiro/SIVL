@@ -5,7 +5,7 @@
 <div class="container cl-10">
 
   <div class="row mt-4">
-    <div class="col cl-6">
+    <div class="col ">
       <table class="table table-hover">
         <thead>
           <tr>
@@ -13,7 +13,7 @@
             <th scope="col">Nombre</th>
             <th scope="col">THC</th>
             <th scope="col">CBD</th>
-            <th scope="col">Nombre</th>
+            <th scope="col">Ciclo</th>
           </tr>
         </thead>
         <tbody>
@@ -29,30 +29,7 @@
         </tbody>
       </table>
     </div>
-    <div class="col cl-6">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Raza</th>
-          <th scope="col">Humedad</th>
-          <th scope="col">Dias</th>
-        </tr>
-      </thead>
-      <tbody>
-        @foreach ($marcas as $marca)
-          <tr>
-            <td>{{$marca->id}}</th>
-            <td>{{$marca->name}}</td>
-            <td>{{$marca->id}}</td>
-            <td>{{$marca->id}}</td>
-            <td>{{$marca->created_at}}</td>
-          </tr>
-        @endforeach
-      </tbody>
-      </table>
-      </div>
+
   </div>
 
   <div class="row mt-4">

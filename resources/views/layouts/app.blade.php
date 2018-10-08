@@ -26,17 +26,43 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'SIVL') }}
                 </a>
-                <a class="navbar-brand" href="{{ url('/') }}">
-                  Ambientes
-                </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                          <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Ambientes</span></a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/prototypes"><span>Visualizar</span></a>
+                              <a class="dropdown-item" href="/create_ambiente"><span>Crear ambiente</span></a>
+                          </div>
+                      </li>
+                    </ul>
 
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                          <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Administrar</span></a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/prototypes"><span>Marcas y especies</span></a>
+                              <a class="dropdown-item" href="/create_ambiente"><span>Variedad</span></a>
+                              <a class="dropdown-item" href="/create_ambiente"><span>Tipos</span></a>
+                          </div>
+                      </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                          <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Dispositivos</span></a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/prototypes"><span>IoT</span></a>
+                              <a class="dropdown-item" href="/create_ambiente"><span>Sensores</span></a>
+                              <a class="dropdown-item" href="/create_ambiente"><span>Reportes</span></a>
+                          </div>
+                      </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

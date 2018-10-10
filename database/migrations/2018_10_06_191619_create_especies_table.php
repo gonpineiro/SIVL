@@ -21,6 +21,8 @@ class CreateEspeciesTable extends Migration
             $table->integer('variedad_id')->unsigned();
             $table->integer('thc');
             $table->integer('cbd');
+            $table->integer('cantidad_in');
+            $table->integer('cantidad_ex');
             $table->integer('ciclo');
 
             $table->timestamps();

@@ -15,7 +15,7 @@ class Prototype extends Model
 
     public function ambiente(){
 
-      return $this->hasOne('App\Ambiente');
+      return $this->belongsTo('App\Ambiente');
     }
 
     public function sensor(){

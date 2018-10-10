@@ -18,6 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/prototypes', 'PrototypesController@show');
+Route::get('/form_prototype', 'PrototypesController@form');
+Route::post('/add_prototype', 'PrototypesController@create');
+
 Route::get('/especies', 'EspeciesController@show');
+Route::post('/add_especie', 'EspeciesController@create');
+
 Route::get('/marcas', 'MarcasController@show');
+Route::post('/add_marca', 'MarcasController@create');
+
+Route::get('/ambientes', 'AmbientesController@show');

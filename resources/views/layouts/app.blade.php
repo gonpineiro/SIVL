@@ -47,9 +47,9 @@
                       <li class="nav-item dropdown">
                           <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Administrar</span></a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="/prototypes"><span>Marcas y especies</span></a>
-                              <a class="dropdown-item" href="/create_ambiente"><span>Variedad</span></a>
-                              <a class="dropdown-item" href="/create_ambiente"><span>Tipos</span></a>
+                              <a class="dropdown-item" href="/marcas"><span>Marcas</span></a>
+                              <a class="dropdown-item" href="/especies"><span>Especies</span></a>
+                              <a class="dropdown-item" href="/types"><span>Variedad y tipos</span></a>
                           </div>
                       </li>
                     </ul>

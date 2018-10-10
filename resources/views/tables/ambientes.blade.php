@@ -11,18 +11,20 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Precio(x3)</th>
-          <th scope="col">Precio(x5)</th>
+          <th scope="col">Temperatura</th>
+          <th scope="col">Humedad</th>
+          <th scope="col">Luz</th>
+          <th scope="col">IP</th>
         </tr>
       </thead>
       <tbody>
-        @foreach ($marcas as $marca)
+        @foreach ($ambientes as $ambiente)
           <tr>
-            <td>{{$marca->id}}</th>
-            <td>{{$marca->name}}</td>
-            <td>$ {{$marca->price_3}}</td>
-            <td>$ {{$marca->price_5}}</td>
+            <td>{{$ambiente->identity}}</th>
+            <td>{{$ambiente->temperatura}}</td>
+            <td>{{$ambiente->humedad}}</td>
+            <td>{{$ambiente->estado_luz}}</td>
+            <td>{{$ambiente->ip_adress}}</td>
           </tr>
         @endforeach
       </tbody>

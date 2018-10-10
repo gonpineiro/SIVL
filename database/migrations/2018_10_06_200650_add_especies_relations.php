@@ -16,7 +16,7 @@ class AddEspeciesRelations extends Migration
         Schema::table('especies', function (Blueprint $table) {
             $table->foreign('marca_id')->references('id')->on('marcas');
             $table->foreign('type_id')->references('id')->on('types');
-            $table->foreign('variedad_id')->references('id')->on('variedades');
+            $table->foreign('variedad_id')->references('id')->on('variedads');
 
         });
     }
@@ -31,6 +31,7 @@ class AddEspeciesRelations extends Migration
         Schema::table('especies', function (Blueprint $table) {
             $table->dropForeign('especies_marca_id_foreign');
             $table->dropForeign('especies_variedad_id_foreign');
+            $table->dropForeign('especies_type_id_foreign');
         });
     }
 }

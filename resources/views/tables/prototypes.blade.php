@@ -28,29 +28,33 @@
         </tbody>
       </table>
     </div>
-    <div class="col cl-6">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Temperatura</th>
-            <th scope="col">Humedad</th>
-            <th scope="col">Estado Luz</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach ($ambientes as $ambiente)
+  </div>
+
+
+    <div class="row mt-4">
+      <div class="col cl-12">
+        <table class="table table-hover">
+          <thead>
             <tr>
-              <td>{{$ambiente->identity}}</th>
-              <td>{{$ambiente->temperatura}}</td>
-              <td>{{$ambiente->humedad}}</td>
-              <td>{{$ambiente->estado_luz}}</td>
+              <th scope="col">#</th>
+              <th scope="col">Temperatura</th>
+              <th scope="col">Humedad</th>
+              <th scope="col">Estado Luz</th>
             </tr>
-          @endforeach
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+              <tr>
+                <td>{{$prototype->ambiente->identity}}</th>
+                <td>{{$prototype->ambiente->temperatura}}</td>
+                <td>{{$prototype->ambiente->humedad}}</td>
+                <td>{{$prototype->ambiente->estado_luz}}</td>
+              </tr>
+
+          </tbody>
+        </table>
+      </div>
     </div>
- </div>
+
 </div>
 
 @endsection

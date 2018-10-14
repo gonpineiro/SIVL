@@ -1,14 +1,18 @@
 @extends('layouts.withoutapp')
 
 @section('content')
-<div class="container mt-2">
-    <div class="row justify-content-center">
-        <div class="container col-12">
+  <div class="content">
+      <div class="title m-b-md ">
+          SIVL
+      </div>
 
-        </div>
 
+        <div class="links">
+          <a href="/especies">Especies</a>
+          <a href="/prototypes">Prototipos</a>
+          <a href="/ambientes">Ambientes</a>
 
-    </div>
+      </div>
+  </div>
 
-</div>
 @endsection

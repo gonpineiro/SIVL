@@ -33,37 +33,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                          <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Ambientes</span></a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="/prototypes"><span>Visualizar</span></a>
-                              <a class="dropdown-item" href="/create_ambiente"><span>Crear ambiente</span></a>
-                          </div>
-                      </li>
-                    </ul>
-
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                          <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Administrar</span></a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="/marcas"><span>Marcas</span></a>
-                              <a class="dropdown-item" href="/especies"><span>Especies</span></a>                              
-                          </div>
-                      </li>
-                    </ul>
-
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                          <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Dispositivos</span></a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="/prototypes"><span>IoT</span></a>
-                              <a class="dropdown-item" href="/create_ambiente"><span>Sensores</span></a>
-                              <a class="dropdown-item" href="/create_ambiente"><span>Reportes</span></a>
-                          </div>
-                      </li>
-                    </ul>
-
+                  
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->

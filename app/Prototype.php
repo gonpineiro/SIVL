@@ -8,6 +8,7 @@ class Prototype extends Model
 {
     protected $guarded = [];
 
+
     public function especie(){
 
       return $this->belongsTo(Especie::class);
@@ -21,6 +22,10 @@ class Prototype extends Model
     public function sensor(){
 
       return $this->belongsTo('App\Sensor');
+    }
+    public function user(){
+
+      return $this->belongsTo(User::class);
     }
 
 

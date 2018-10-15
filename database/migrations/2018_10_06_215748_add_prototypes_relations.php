@@ -17,6 +17,7 @@ class AddPrototypesRelations extends Migration
             $table->foreign('ambiente_id')->references('id')->on('ambientes');
             $table->foreign('especie_id')->references('id')->on('especies');
             $table->foreign('sensor_id')->references('id')->on('sensors');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -31,6 +32,7 @@ class AddPrototypesRelations extends Migration
             $table->dropForeign('prototypes_ambiente_id_foreign');
             $table->dropForeign('prototypes_especie_id_foreign');
             $table->dropForeign('prototypes_sensor_id_foreign');
+            $table->dropForeign('prototypes_user_id_foreign');
         });
     }
 }

@@ -18,6 +18,7 @@ class CreatePrototypesTable extends Migration
             $table->integer('ambiente_id')->unsigned();
             $table->integer('especie_id')->unsigned();
             $table->integer('sensor_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->string('name');
             $table->timestamps();
         });

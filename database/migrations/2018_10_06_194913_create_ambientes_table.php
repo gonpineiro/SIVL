@@ -14,7 +14,10 @@ class CreateAmbientesTable extends Migration
     public function up()
     {
         Schema::create('ambientes', function (Blueprint $table) {
+
+
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->integer('identity');
             $table->string('token_blink');
             $table->decimal('temperatura',5,2);

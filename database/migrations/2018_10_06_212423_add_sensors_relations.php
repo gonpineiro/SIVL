@@ -15,6 +15,8 @@ class AddSensorsRelations extends Migration
     {
         Schema::table('sensors', function (Blueprint $table) {
             $table->foreign('ambiente_id')->references('id')->on('ambientes');
+            $table->foreign('user_id')->references('id')->on('users');
+
         });
     }
 
@@ -27,6 +29,8 @@ class AddSensorsRelations extends Migration
     {
         Schema::table('sensors', function (Blueprint $table) {
             $table->dropForeign('sensors_ambiente_id_foreign');
+            $table->dropForeign('sensors_user_id_foreign');
+
         });
     }
 }

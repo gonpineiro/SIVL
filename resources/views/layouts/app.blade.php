@@ -37,18 +37,29 @@
                       <li class="nav-item dropdown">
                           <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Ambientes</span></a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="/prototypes"><span>Visualizar</span></a>
-                              <a class="dropdown-item" href="/create_ambiente"><span>Crear ambiente</span></a>
+                              <a class="dropdown-item" href="/ambientes"><span>Visualizar</span></a>
+                              <a class="dropdown-item" href="/form_prototype"><span>Crear ambiente</span></a>
                           </div>
                       </li>
                     </ul>
 
                     <ul class="navbar-nav">
                       <li class="nav-item dropdown">
+                          <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Prototipos</span></a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/prototypes"><span>Visualizar</span></a>
+                              <a class="dropdown-item" href="/form_prototype"><span>Generar Prototipo</span></a>
+                          </div>
+                      </li>
+                    </ul>
+
+
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
                           <a id="navbarDropdownAmbientes" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><span class="caret">Administrar</span></a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                               <a class="dropdown-item" href="/marcas"><span>Marcas</span></a>
-                              <a class="dropdown-item" href="/especies"><span>Especies</span></a>                              
+                              <a class="dropdown-item" href="/especies"><span>Especies</span></a>
                           </div>
                       </li>
                     </ul>

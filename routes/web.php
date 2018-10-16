@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['middleware' => 'auth'], function () {
+
   Route::get('/prototypes', 'PrototypesController@show');
   Route::get('/form_prototype', 'PrototypesController@form');
   Route::post('/add_prototype', 'PrototypesController@create');
@@ -34,4 +35,10 @@ Route::group(['middleware' => 'auth'], function () {
   Route::post('/add_marca', 'MarcasController@create');
 
   Route::get('/ambientes', 'AmbientesController@show');
+  Route::get('/form_ambiente', 'AmbientesController@form');
+  Route::post('/add_ambiente', 'AmbientesController@create');
+
+  Route::get('/sensores', 'AmbientesController@show');
+
+  Route::post('/add_sensor', 'SensorsController@create');
 });

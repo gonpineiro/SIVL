@@ -15,9 +15,10 @@ class CreateSensorsTable extends Migration
     {
         Schema::create('sensors', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();;
             $table->integer('ambiente_id')->unsigned();
             $table->string('name');
-            $table->decimal('valor',4,2);
+            $table->decimal('valor',4,2)->default(70);;
             $table->timestamps();
         });
     }

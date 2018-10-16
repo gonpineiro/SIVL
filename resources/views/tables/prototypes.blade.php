@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 
 <div class="container">
@@ -16,45 +15,29 @@
           </tr>
         </thead>
         <tbody>
-          @foreach ($prototypes as $prototype)
+          @if(empty($prototypes) or empty($ambientes) )
             <tr>
-              <td>{{$prototype->id}}</th>
-              <td>{{$prototype->name}}</td>
-              <td>{{$prototype->especie->name}}</td>
-              <td>{{$prototype->sensor->valor}} %</td>
-              <td>{{$prototype->created_at}}</td>
+              <td></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
-          @endforeach
+          @else
+            @foreach ($prototypes as $prototype)
+              <tr>
+                <td>{{$prototype->id}}</th>
+                <td>{{$prototype->name}}</td>
+                <td>{{$prototype->especie->name}}</td>
+                <td>{{$prototype->sensor->valor}} %</td>
+                <td>{{$prototype->created_at}}</td>
+              </tr>
+            @endforeach
+          @endif
         </tbody>
       </table>
     </div>
   </div>
-
-
-    <div class="row mt-4">
-      <div class="col cl-12">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Temperatura</th>
-              <th scope="col">Humedad</th>
-              <th scope="col">Estado Luz</th>
-            </tr>
-          </thead>
-          <tbody>
-              <tr>
-                <td>{{$prototype->ambiente->identity}}</th>
-                <td>{{$prototype->ambiente->temperatura}}</td>
-                <td>{{$prototype->ambiente->humedad}}</td>
-                <td>{{$prototype->ambiente->estado_luz}}</td>
-              </tr>
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-
 </div>
 
 @endsection

@@ -19,7 +19,7 @@ class PrototypesController extends Controller
     $prototype = Prototype::where('user_id', $user->id)->orderBy('id')->get();
     $ambiente = Ambiente::where('user_id', $user->id)->orderBy('id')->get();
 
-  
+
     return view('tables.prototypes', [
       'prototypes' => $prototype,
       'ambientes' => $ambiente,
@@ -27,9 +27,12 @@ class PrototypesController extends Controller
 
   }
 
-  public function form(Prototype $prototype){
-    $ambiente = Ambiente::all();
-    $sensor = Sensor::all();
+  public function form(Request $request){
+
+    $user = $request->user();
+
+    $ambiente = Ambiente::where('user_id', $user->id)->orderBy('id')->get();
+    $sensor = Sensor::where('user_id', $user->id)->orderBy('id')->get();
     $especie = Especie::all();
     #dd($prototype);
     return view('forms.prototype', [
@@ -51,6 +54,8 @@ class PrototypesController extends Controller
         'user_id' => $user->id,
         'sensor_id' => $request->input('sensor'),
     ]);
+
+
 
     return redirect('/prototypes');
   }

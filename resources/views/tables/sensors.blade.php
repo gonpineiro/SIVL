@@ -19,10 +19,10 @@
       <tbody>
         @foreach ($marcas as $marca)
           <tr>
-            <td>{{$marca->id}}</th>
-            <td>{{$marca->name}}</td>
-            <td>$ {{$marca->price_3}}</td>
-            <td>$ {{$marca->price_5}}</td>
+            <td>{{$sensor->id}}</th>
+            <td>{{$sensor->name}}</td>
+            <td>$ {{$sensor->ambiente->id}}</td>
+            <td>$ {{$sensor->valors}}</td>
           </tr>
         @endforeach
       </tbody>

@@ -20,10 +20,9 @@ class CreateAmbientesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('identity');
             $table->string('token_blink');
-            $table->decimal('temperatura',5,2)->default(66);
-            $table->decimal('humedad',5,2)->default(66);
+            $table->integer('medidor_id')->nullable();
             $table->string('ip_adress');
-            $table->boolean('estado_luz')->default(1);
+
             $table->timestamps();
         });
     }

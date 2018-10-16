@@ -45,6 +45,7 @@ class PrototypesController extends Controller
 
   public function create(Request $request){
 
+      
       $user = $request->user();
 
       $prototype = Prototype::create([

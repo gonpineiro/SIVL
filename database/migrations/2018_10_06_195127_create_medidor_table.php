@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSensorsTable extends Migration
+class CreateMedidorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateSensorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sensors', function (Blueprint $table) {
+        Schema::create('medidor', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->integer('ambiente_id')->unsigned();
-            $table->string('name');
-            $table->decimal('valor',4,2)->default(70);;
+            $table->integer('identy')->unsigned();
+            $table->decimal('temperatura',5,2);
+            $table->decimal('humedad',5,2);
+            $table->boolean('estado_luz');
+            $table->boolean('estado_tiempo');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateSensorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sensors');
+        Schema::dropIfExists('medidor');
     }
 }

@@ -19,7 +19,7 @@ class SensorsController extends Controller
   }
 
   public function create(Request $request){
-
+    dd($request)->input('name');
       $user = $request->user();
 
       $prototype = Sensor::create([

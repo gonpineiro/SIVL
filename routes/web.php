@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+Route::get('/enviardatos', 'MedidorsController@create');
 
 
 Route::group(['middleware' => 'auth'], function () {
@@ -37,8 +37,6 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('/ambientes', 'AmbientesController@show');
   Route::get('/form_ambiente', 'AmbientesController@form');
   Route::post('/add_ambiente', 'AmbientesController@create');
-
-  Route::get('/sensores', 'AmbientesController@show');
 
   Route::post('/add_sensor', 'SensorsController@create');
 });

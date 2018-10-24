@@ -20,7 +20,6 @@ class CreateAmbientesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('identity');
             $table->string('token_blink');
-            $table->integer('medidor_id')->nullable();
             $table->string('ip_adress');
 
             $table->timestamps();

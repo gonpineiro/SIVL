@@ -24,13 +24,14 @@
               <td></td>
             </tr>
           @else
+
             @foreach ($prototypes as $prototype)
               <tr>
                 <td>{{$prototype->id}}</th>
                 <td>{{$prototype->name}}</td>
                 <td>{{$prototype->especie->name}}</td>
-                <td>{{$prototype->sensor->valor}} %</td>
-                <td>{{$prototype->created_at}}</td>
+                <td>{{$prototype->sensor->valor}} %</td>              
+                <td>{{$prototype->created_at->diffInDays($now)}}</td>
               </tr>
             @endforeach
           @endif

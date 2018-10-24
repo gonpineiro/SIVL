@@ -50,13 +50,24 @@
           <div class="row">
             <div class="col-12">
               <label for="marca" class="col-md-12 col-form-label text-md">Marca</label>
-              <select class="form-control" name="marca">
-                <option value="0">Seleccione</option>
-                @foreach ($marcas as $marca)
-                  <option value="{{$marca->id}}">{{$marca->name}}</option>
-                @endforeach
+              @if (count($marcas) == 0 )
+                <select class="form-control" name="marca" disabled>
+                  <option value="0">Seleccione</option>
+                  @foreach ($marcas as $marca)
+                    <option value="{{$marca->id}}">{{$marca->name}}</option>
+                  @endforeach
+                </select>
+              @else
+                <select class="form-control" name="marca">
+                  <option value="0">Seleccione</option>
+                  @foreach ($marcas as $marca)
+                    <option value="{{$marca->id}}">{{$marca->name}}</option>
+                  @endforeach
+                </select>
+              @endif  
 
-              </select>
+
+
             </div>
           </div>
 

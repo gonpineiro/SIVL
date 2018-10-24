@@ -6,7 +6,7 @@ use App\Ambiente;
 use App\Sensor;
 use App\Especie;
 use Illuminate\Http\Request;
-
+use Carbon\Carbon;
 
 
 class PrototypesController extends Controller
@@ -15,12 +15,13 @@ class PrototypesController extends Controller
   public function show(Request $request){
 
     $user = $request->user();
-
+    $now = Carbon::now();
     $prototype = Prototype::where('user_id', $user->id)->orderBy('id')->get();
     $ambiente = Ambiente::where('user_id', $user->id)->orderBy('id')->get();
 
 
     return view('tables.prototypes', [
+      'now' => $now,
       'prototypes' => $prototype,
       'ambientes' => $ambiente,
     ]);
@@ -45,7 +46,7 @@ class PrototypesController extends Controller
 
   public function create(Request $request){
 
-      
+
       $user = $request->user();
 
       $prototype = Prototype::create([

@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/enviardatos', 'MedidorsController@create');
+Route::post('/enviardatos', 'MedidorsController@show');
 
 
 Route::group(['middleware' => 'auth'], function () {

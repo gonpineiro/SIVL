@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMedidorTable extends Migration
+class CreateMedidorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateMedidorTable extends Migration
      */
     public function up()
     {
-        Schema::create('medidor', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('identy')->unsigned();
+        Schema::create('medidors', function (Blueprint $table) {
+            $table->integer('id');
+            $table->integer('identity')->unsigned()->primary()->unique();
             $table->decimal('temperatura',5,2);
             $table->decimal('humedad',5,2);
             $table->boolean('estado_luz');
@@ -31,6 +31,6 @@ class CreateMedidorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('medidor');
+        Schema::dropIfExists('medidors');
     }
 }

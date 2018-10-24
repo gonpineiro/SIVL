@@ -15,6 +15,7 @@ class AddAmbientesRelations extends Migration
     {
         Schema::table('ambientes', function (Blueprint $table) {
           $table->foreign('user_id')->references('id')->on('users');
+          
           });
     }
 
@@ -26,5 +27,6 @@ class AddAmbientesRelations extends Migration
     public function down()
     {
         $table->dropForeign('ambientes_user_id_foreign');
+
     }
 }

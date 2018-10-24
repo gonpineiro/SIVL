@@ -116,7 +116,7 @@
           <div class="row">
             <div class="col-8">
               <label for="especie" class="col-md-12 col-form-label text-md">Especie</label>
-                @if (count($ambientes) == 0)
+                @if (count($especies) == 0)
                   <select class="form-control" name="especie" disabled>
                     <option value="0">Seleccione</option>
                     @foreach ($especies as $especie)
@@ -136,7 +136,7 @@
           <div class="row">
             <div class="col-8">
               <label for="sensor" class="col-md-12 col-form-label text-md">Sensor</label>
-              @if (count($ambientes) == 0)
+              @if (count($sensors) == 0)
                 <select class="form-control" name="sensor" disabled>
                   <option value="0">Seleccione</option>
                   @foreach ($sensors as $sensor)

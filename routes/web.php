@@ -19,7 +19,27 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/enviardatos', 'MedidorsController@show');
+#Route::post('/enviardatos', 'MedidorsController@show');
+
+
+Route::post('/enviardatos',function (){
+  $identity= $_POST ['identity'];
+  $temperatura = $_POST ['temperatura'];
+  $humedad = $_POST ['humedad'];
+  $estado_luz = $_POST ['estado_luz'];
+  $estado_tiempo = $_POST ['estado_tiempo'];
+
+  #$conexion->query("INSERT INTO `medidor` (`id`, `chipId`, `fecha`, `temperatura`, `humedad`,`estadoluces`,`estadotiempo`) VALUES (NULL, '$chipid', CURRENT_TIMESTAMP, '$temperatura','$humedad','$estadoluces','$estadotiempo');");
+  DB::insert("INSERT INTO `medidor` (`id`, `identity`, `fecha`, `temperatura`, `humedad`,`estado_luces`,`estado_tiempo`) VALUES (NULL, 'identity', CURRENT_TIMESTAMP, '$temperatura','$humedad','$estado_luces','$estado_tiempo')")
+
+
+  echo "Datos ingresados correctamente !!!!";
+
+})
+
+
+
+
 
 
 Route::group(['middleware' => 'auth'], function () {
